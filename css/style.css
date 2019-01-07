@@ -1,4 +1,4 @@
-html, body { height: 100%; width: 100%; margin: 0;}
+html, body { height: 100vh; width: 100%; margin: 0;}
 div { height: 100%; width: 100%; margin: 0; }
 * {box-sizing: border-box}
 @font-face {
@@ -16,6 +16,22 @@ div { height: 100%; width: 100%; margin: 0; }
     font-style: normal;
 
 }
+
+.background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    background-image: url('../assets/Reputation.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.4;
+    filter:alpha(opacity=80);
+}
+
 .items a {display: block;}
 .headercontain
 {
@@ -226,6 +242,7 @@ height: 80vh;
 padding-top: 15vh;
 padding-left: 35vw;
 box-sizing: border-box;
+
 }
 
 
@@ -315,18 +332,57 @@ border-bottom: 0px solid white;
 .maincontain{
 margin-top: 10vh;
 height: 50vh;
-background-color: blue;
+
+background-image: url(../assets/dk.png);
 }
+.seccontain{
+height: 30vh;
+text-align:center;
+justify-content: center;
+display:block;
+}
+.holder{
+display: inline-block;
+width: 25vh;
+margin: 2.5vh 1vh;
+position: relative;
+background-color: pink;
+height: 25vh;
+padding: 0;
+align-self: center;
+cursor: pointer;
+text-align:center;
+justify-content: center;
+display:inline-block;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.holder:hover{
+Border: 10px solid #B02541;
+}
+.holdone{background-image: url(https://i.ytimg.com/vi/HIb_TlK2HAI/maxresdefault.jpg);}
+.holdtwo{background-image: url(https://img.cache.vevo.com/thumb/cms/ffec47c242023535fd87d8a8063c5c4c201810115401057.jpg);}
+.holdthree{background-image: url(https://images1.laweekly.com/imager/u/745xauto/8593718/taylor-swift-look-what-you-made-me-do.png);background-position: right;}
+.holdfour{background-image: url(https://i.ytimg.com/vi/sEr7bAtZ8rY/maxresdefault.jpg);background-position: left;}
+.holdfive{background-image: url(https://i.ytimg.com/vi/7F37r50VUTQ/maxresdefault.jpg);background-position: right;}
 iframe {
     display:block;
 }
 .mainembed {
 float: right;
 border: 3px double black;
-margin-right: 10vh;
-margin-top: 2.5%;
+position: relative;
+top: 10%;
+right: 50vw;
 }
-
+.mainvidtext{
+font-family: nixieone;
+font-size: 2rem;
+color: gold;
+position: relative;
+left: 50vw;
+top: 30%;
+}
 /*Music Page */
 .tableholder{
 height: 70vh;
@@ -358,6 +414,12 @@ height: 5vh;
 width: 15vw;
 position: fixed;
 top: 74vh;
+}
+.saveplaylistbutton{
+height: 5vh;
+width: 15vw;
+position: fixed;
+top: 68vh;
 }
 .albt{
 width:11vw;

@@ -9,7 +9,7 @@ var songid;
 var longulr ="";
 var namearr = new Array();
 var listsong = new Array();
-var timearr;
+var timearr = new Array();
 var Playlistdata = {
 "name": playlistname,
 "public": true,
@@ -137,12 +137,26 @@ $(".tsalbum").click(function(){
 $(".add").click(function(){
   var name = $(this).siblings(".song").text();
   var time = $(this).siblings(".time").text();
-
   namearr.push(name);
+  timearr.push(time);
 $(".playlisttable tr:last").after( "<tr><td>" + name + "</td><td>" + time + "</td></tr>" );
 });
-//CHANGE TO GITHUB PAGES REDIRECT
 
+if (localStorage.getItem("tabledata") !== null){
+  var stored = localStorage.getItem("tabledata");
+  var timestored = localStorage.getItem("timedata")
+    if (stored) {
+        namearr = JSON.parse(stored);
+        timearr = JSON.parse(timestored);
+                }
+          }
+$(namearr).each(function(index, value){
+$(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[index] + "</td></tr>" );
+})
+$(".saveplaylistbutton").click(function(){
+localStorage.setItem("tabledata", JSON.stringify(namearr));
+localStorage.setItem("timedata", JSON.stringify(timearr));
+});
 $(".Authbutton").click(function(){
  window.location="https://accounts.spotify.com/en/authorize?client_id=f46a343f40644df5ad43f840a26e025c&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
 });
