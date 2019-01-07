@@ -1,0 +1,229 @@
+html, body { height: 100%; width: 100%; margin: 0;}
+
+
+@font-face {
+    font-family: 'nixieone';
+    src: url('../assets/nixieone-regular-webfont.woff') format('woff2'),
+         url('../assets/nixieone-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'abadi';
+    src: url('../assets/abadimtstd-extralight-webfont.woff2') format('woff2'),
+         url('../assets/abadimtstd-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.items a {display: block;}
+.headercontain
+{
+  width:auto;
+  max-height: 10vh;
+  background-color: #ECCFEB;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.navbar
+{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-width: 60vw;
+    padding-top: 60px;
+    float: right;
+
+}
+
+.headitem {float: right;}
+
+
+.strikethrough {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  font-family: nixieone;
+  text-decoration: none;
+  margin: 4px 12px;
+  position: relative;
+
+}
+.sidebar > a {transition:0.3s;text-align: left; font-size 2rem; font-family: nixieone; display: block; transi}
+.sidebar
+{
+width: 0;
+height: 100%;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background: linear-gradient(to bottom, #eccfeb 1%,#dfc3da 100%);
+overflow-x: hidden;
+transition: 0.5s;
+}
+.side {font-size:4rem;cursor:pointer display:none;position: absolute; left:90%; top: 10%;}
+.sidenav .closebtn {
+    font-family: nixieone;
+    font-size: 3rem;
+
+}
+.strikethrough::before
+{
+  content: '';
+  background: #B02451;
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 0;
+}
+.strikethrough::after {
+     content: '';
+     background: #B02451;
+     position: absolute;
+     top: 50%;
+     height: 2px;
+     width: 0;
+   }
+
+.strikethrough::before {left: 0;}
+
+.strikethrough::after {right: 0;transition: width 500ms ease;}
+
+.strikethrough:hover:before {width: 100%;transition: width 500ms ease;}
+
+.strikethrough::after {width: 100%;background: transparent;transition: 0;}
+
+
+.title
+{
+  max-width: 20vw;
+  font-size: 3rem;
+  height: auto;
+  font-family: nixieone;
+  font-weight: normal;
+  text-decoration: none;
+  text-decoration-color: #B02451;
+  position: relative;
+  top: 3vh;
+  display:inline !important;
+}
+.footer
+{
+min-height: 10vh;
+max-height: 10vh;
+background-color: #DFC3DA;
+position: absolute;
+bottom: 0;
+}
+.footer2{
+height: 7vh;
+position: relative;
+bottom: 0;
+background-color: #B02451;
+}
+.textfooter{
+min-width: 100vw;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+position: relative;
+top: 45%;
+right: 40vw;
+
+
+}
+.textfooter  li{float: right}
+.textfooter  a {
+font-family: abadi;
+font-size: 1rem;
+display: block;
+color: black;
+text-align: center;
+position: relative;
+text-decoration: underline;
+margin: 4px 12px;
+}
+
+.footer2 .bar
+{
+border-bottom: 5px solid #DFC3DA;
+position: absolute;
+left: 25vw;
+bottom: 1vh;
+border-radius: 10px;
+width: 50vw;
+}
+
+/*Music Page */
+.Albumdetails{height: 70vh; border: 1px solid lightskyblue; box-sizing: border-box; margin-top: 10vh;}
+
+#pullout {
+  position: absolute;
+  top: 50vh;
+  left: -230px;
+  width: 266px;
+  height: 280px;
+  background: #f5f5f5;
+  transition: all 0.5s ease;
+}
+
+#pullout.active {
+  left: 0;
+}
+
+#pullout-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 280px;
+}
+
+
+
+#pullout-tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 280px;
+  background: #ff0000;
+  cursor: pointer;
+}
+#pully {
+font-size: 3em;
+position: fixed;
+top: 50%;
+right: -15px;
+border: 1px solid black;
+border-radius: 10px;
+text-align: center;
+
+}
+@media only screen and (max-width: 950px)
+{
+
+}
+@media only screen and (min-width: 951px){  .gridcontain {display: inline-grid;
+  grid-gap: 0px 0px;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto;}
+  .Social{display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: auto;}
+}
+@media only screen and (max-width: 1200px){
+.side {display:block;}
+.navbar {display:none;}
+.items > span {font-size: 3.4rem;}}
+@media only screen and (min-width: 1200px)
+{.side {display:none}}
