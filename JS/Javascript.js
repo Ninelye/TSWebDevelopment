@@ -144,7 +144,7 @@ $(".playlisttable tr:last").after( "<tr><td>" + name + "</td><td>" + time + "</t
 //CHANGE TO GITHUB PAGES REDIRECT
 
 $(".Authbutton").click(function(){
- window.location="https://accounts.spotify.com/en/authorize?client_id=f46a343f40644df5ad43f840a26e025c&redirect_uri=http://127.0.0.1:3000/Music.html&response_type=token&scope=playlist-modify-public ";
+ window.location="https://accounts.spotify.com/en/authorize?client_id=f46a343f40644df5ad43f840a26e025c&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
 });
 $(".playlistbutton").click(function(){
   url = window.location.href,
