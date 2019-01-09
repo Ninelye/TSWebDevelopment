@@ -240,6 +240,9 @@ url: "https://api.spotify.com/v1/playlists/"+createdplaylistid+"/tracks?position
 headers: {
     'Authorization': 'Bearer ' + access_token
 },
+success: function(){
+    alert("Playlist Created");
+}
 
 });
 

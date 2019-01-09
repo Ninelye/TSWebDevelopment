@@ -23,13 +23,13 @@ div { height: 100%; width: 100%; margin: 0; }
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 0;
+    z-index: -1;
     background-image: url('../assets/Reputation.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     opacity: 0.4;
-    filter:alpha(opacity=80);
+
 }
 
 .items a {display: block;}
@@ -71,20 +71,33 @@ a {
   position: relative;
 
 }
-.sidebar > a {transition:0.3s;text-align: left; font-size 2rem; font-family: nixieone; display: block; transi}
+.sidebar > a {
+ transition:0.3s;
+ text-align: left;
+ font-size 2rem;
+ font-family: nixieone;
+ display: block;
+}
 .sidebar
 {
 width: 0;
 height: 100%;
 position: fixed;
-z-index: 1;
+z-index: 400;
 top: 0;
 left: 0;
 background: linear-gradient(to bottom, #eccfeb 1%,#dfc3da 100%);
 overflow-x: hidden;
 transition: 0.5s;
 }
-.side {font-size:4rem;cursor:pointer display:none;position: absolute; left:90%; top: 10%;}
+.side {
+font-size:4rem;
+cursor:pointer;
+ display:none;
+position: absolute;
+ left:90%;
+ top: 10%;
+}
 .sidenav .closebtn {
     font-family: nixieone;
     font-size: 3rem;
@@ -110,7 +123,10 @@ transition: 0.5s;
 
 .strikethrough::before {left: 0;}
 
-.strikethrough::after {right: 0;transition: width 500ms ease;}
+.strikethrough::after {
+right: 0;
+transition: width 500ms ease;
+}
 
 .strikethrough:hover:before {width: 100%;transition: width 500ms ease;}
 
@@ -161,9 +177,11 @@ background-image: url("../assets/Taylorswift.jpg");
 }
 .Tour
 {
-background-image: url("../assets/");
-
+background-image: url("https://static.wonderfulunion.net/groundctrl/clients/taylor-swift/media/01/02/images/assets/large.xJ8NMIPM2uHkESDrN-Ycu6v5g8u7wn4Qt2kMBjAsSXk.jpg");
+background-position: 50% 50%;
+color: #ECCFEB;
 }
+.txtcolor{}
 .Music
 {
 background-image: url("../assets/Reputation.jpeg");
@@ -236,6 +254,7 @@ width: 50vw;
   margin-top: 10vh;
 	height: 80vh;
 }
+.heightremove{height:auto;}
 
 .containerembed{
 height: 80vh;
@@ -250,11 +269,10 @@ box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-
   float: left;
   width: 30%;
   height: 14vh;
+  z-index: 100;
   cursor: pointer;
   margin-left: 3vw;
   margin-top: 16vh;
@@ -265,8 +283,6 @@ box-sizing: border-box;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   background: rgba(255,255,255,0);
-  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
-  box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.3) ;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
   border-bottom: 2px solid grey;
 }
@@ -370,18 +386,20 @@ iframe {
 }
 .mainembed {
 float: right;
-border: 3px double black;
+-webkit-box-shadow: 0px 0px 36px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 36px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 36px 0px rgba(0,0,0,0.75);
 position: relative;
 top: 10%;
 right: 50vw;
 }
 .mainvidtext{
-font-family: nixieone;
+font-family: abadi;
 font-size: 2rem;
 color: gold;
 position: relative;
 left: 50vw;
-top: 30%;
+top: 12%;
 }
 /*Music Page */
 .tableholder{
@@ -440,7 +458,7 @@ background-color: pink;
 .maintable
 {
   width: 67.2vw;
-  border-collapse: seperate;
+  border-collapse: separate;
   height: 70vh;
 }
 
