@@ -580,7 +580,8 @@ font-size: 2rem;
     border: 1px solid black;
     border-radius: 10px;
   }
-
+  .albt {font-size: 1rem;
+}
 }
 @media only screen and (min-width: 951px){  .gridcontain {display: inline-grid;
   grid-gap: 0px 0px;
