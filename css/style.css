@@ -348,7 +348,7 @@ border-bottom: 0px solid white;
 .maincontain{
 margin-top: 10vh;
 height: 50vh;
-
+z-index: -2;
 background-image: url(../assets/dk.png);
 }
 .seccontain{
