@@ -446,7 +446,7 @@ top: 11vh;
 left: 1vw;
 height: 5vh;
 font-family: abadi;
-font-size: 2rem;
+font-size: 1rem;
 background-color: white;
 border: 1px solid #B02541;
 cursor: pointer;
@@ -564,10 +564,11 @@ font-size: 2rem;
   .inst{background-image: url("../assets/logo.png");background-size: cover;background-position: center;}
   .fb{background-image: url("../assets/fblogoblock.png");background-size: cover;background-position: center;}
   .tw{background-image: url("../assets/twitterblocklogo.png");background-size: cover;background-position: center;}
-  .spot{background-image: url("../assets/spotlogoblock.png");background-size: cover;background-position: center;}
+.addtext{font-size: 1em;}
+.spot{background-image: url("../assets/spotlogoblock.png");background-size: cover;background-position: center;}
   .apple{background-image: url("../assets/musiclogoblock.png");background-size: cover;background-position: center;}
   .yt {background-image: url("../assets/ytlogoblock.png"); background-size: cover;background-position: center;}
-  .Social .items {margin-bottom: 80px;border: 1px solid black;}
+  .Social .items {margin-bottom: 80px;}
   .items > span
   {
     font-family: nixieone;
@@ -579,9 +580,13 @@ font-size: 2rem;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
+    color: black;
   }
-  .albt {font-size: 1rem;
+.albt
+{
+font-size: 1rem;
 }
+
 }
 @media only screen and (min-width: 951px){  .gridcontain {display: inline-grid;
   grid-gap: 0px 0px;

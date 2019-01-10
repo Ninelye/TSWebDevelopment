@@ -241,7 +241,7 @@ headers: {
     'Authorization': 'Bearer ' + access_token
 },
 success: function(){
-    alert("Playlist Created");
+    
 }
 
 });
