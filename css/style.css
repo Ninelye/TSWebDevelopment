@@ -237,7 +237,7 @@ background-size: contain;
 }
 .footer2{
 height: 10vh;
-position: absolute;
+position: fixed;
 bottom: 0;
 background-color: #B02451;
 text-align: center;
