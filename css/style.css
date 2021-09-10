@@ -1,5 +1,5 @@
-html, body { height: 100vh; width: 100%; margin: 0;}
-div { height: 100%; width: 100%; margin: 0; }
+html, body { height: 100vh; width: 100%; margin: 0; overflow: hidden;}
+div, a { height: 100%; width: 100%; margin: 0; }
 * {box-sizing: border-box}
 @font-face {
     font-family: 'nixieone';
@@ -43,6 +43,7 @@ div { height: 100%; width: 100%; margin: 0; }
   top: 0;
   width: 100%;
   z-index: 400;
+  border: 1px solid #B02541;
 }
 
  ul
@@ -106,7 +107,7 @@ position: absolute;
 .strikethrough::before
 {
   content: '';
-  background: #B02451;
+  background: #A17D9F;
   position: absolute;
   top: 50%;
   height: 2px;
@@ -114,7 +115,7 @@ position: absolute;
 }
 .strikethrough::after {
      content: '';
-     background: #B02451;
+     background: #A17D9F;
      position: absolute;
      top: 50%;
      height: 2px;
@@ -133,43 +134,20 @@ transition: width 500ms ease;
 .strikethrough::after {width: 100%;background: transparent;transition: 0;}
 
 
-.gridcontain
-{
 
-  margin-top: 10vh;
-  max-height: 80vh;
-
-}
 .items
 {
 background-repeat: no-repeat;
 background-position: 75% 50%;
 background-size: cover;
-border: 1px solid #B02451;
+border: 1px solid #A17D9F;
 cursor: pointer;
-
+position: relative;
 }
-.Social
-{
 
-background: linear-gradient(to bottom, #eccfeb 1%,#dfc3da 100%);
-
-
-}
 .items .items{border: 0px;}
-.items .items:hover{background-color: #B02451;}
+.items .items:hover{background-color: #A17D9F;}
 .items:hover{opacity: 1;}
-.items:hover > span {}
-.items span
-{
-  font-family: nixieone;
-  font-weight: normal;
-  font-size: 4rem;
-  position: absolute;
-  top: 80vh;
-  width: 16.5vw;
-  text-align: center;
-}
 
 .About
 {
@@ -230,16 +208,16 @@ background-size: contain;
   font-family: nixieone;
   font-weight: normal;
   text-decoration: none;
-  text-decoration-color: #B02451;
+  text-decoration-color: #A17D9F;
   position: relative;
   top: 3vh;
   cursor: pointer;
 }
 .footer2{
-height: 10vh;
+height: 5vh;
 position: fixed;
 bottom: 0;
-background-color: #B02451;
+background-color: #A17D9F;
 text-align: center;
 }
 .footer2 .bar{
@@ -297,18 +275,25 @@ top: 40vh;
 .fourth {
 position: absolute;
 top: 60vh;
-border-bottom: 0px solid white;
+border-bottom: 0px solid #FFFAFF;
 }
 
 .fa {
-  padding: 20px;
-  font-size: 30px !important;
-  width: 30px;
+  font-size: 20px !important;
+  width: 25px;
+  height: 50%;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+  border-radius: 10%;
   box-sizing: content-box;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  bottom: 0;
+  color: #FFFAFF;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
 
 }
 
@@ -316,33 +301,6 @@ border-bottom: 0px solid white;
     opacity: 0.7;
 }
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.fa-tumblr {
-  background: #2c4762;
-  color: white;
-}
 
 /*Video Page */
 .maincontain{
@@ -403,35 +361,43 @@ top: 12%;
 }
 /*Music Page */
 .tableholder{
-height: 70vh;
-width: 70vw;
+height: 75vh;
+width: 67.5vw;
 position: relative;
 margin-left: 1vw;
 margin-top: 13vh;
-overflow-y: scroll;
+overflow-y: auto;
 }
 .playlist{
-height: 80vh;
+height: 60vh;
 width: 30vw;
 position: fixed;
 right: 0;
-top: 10vh;
-background-color: pink;
-display: flex;
+top: 17vh;
+background-color: #FFFAFF;
+border: 1px solid #B02541;
+font-size: 2rem;
+font-family: nixieone;
+text-align: center;
 justify-content: center;
-overflow-y: scroll;
+overflow-y: visible;
+margin: 1%;
 }
 .playlistbutton{
 height: 5vh;
-width: 15vw;
+width: 30vw;
 position: fixed;
-top: 80vh;
+bottom: 13vh;
+right: 0;
+margin: 1%;
 }
 .Authbutton{
 height: 5vh;
-width: 15vw;
+width: 30vw;
 position: fixed;
-top: 74vh;
+bottom:  7vh;
+right: 0;
+margin: 1%;
 }
 .saveplaylistbutton{
 height: 5vh;
@@ -447,33 +413,48 @@ left: 1vw;
 height: 5vh;
 font-family: abadi;
 font-size: 1rem;
-background-color: white;
+background-color: #FFFAFF;
 border: 1px solid #B02541;
 cursor: pointer;
 }
 .albt:hover{
-background-color: pink;
+background-color: #ECCFEB;
 }
 
+.albt:focus{
+background-color: #A17D9F;
+}
+.namediv {
+  width:50%;
+  position: relative;
+  left: 0;
+  height: 10%;
+  font-family: abadi;
+  font-size: 2rem;
+  background-color: #FFFAFF;
+  border: 1px solid #B02541;
+  text-align: center;
+}
 .maintable
 {
-  width: 67.2vw;
+  width: 100%;
   border-collapse: separate;
   height: 70vh;
 }
 
 tr{text-align: center;}
 .head {
-  background-color: #B02451;
+  background-color: #A17D9F;
   height: 7vh;
   font-size: 2rem;
   margin: 0;
   padding: 0;
   font-family: nixieone;
 }
-.maindata {height: 5vh;font-family: abadi;}
+.maindata {height: auto; font-family: abadi; font-size: 1.5rem;}
 
 tr:nth-child(odd){background-color: #DFC3DA}
+tr:nth-child(even){background-color: #FFFAFF}
 /*HEADERS*/
 .head{
   border-right: 1px solid gray;
@@ -482,41 +463,25 @@ tr:nth-child(odd){background-color: #DFC3DA}
   font-family: nixieone;
   font-size: 2rem;
 }
-.playlistdata{
-
+.playlistrow{
+margin-top: 0;
+height: auto;
 }
 .playlisttable{
+margin-top: 0;
+height: auto;
 width: 30vw;
 font-family: abadi;
-font-size: 2rem;
+font-size: 1rem;
+}
+.playlistdata{
+  background-color: Pink;
 }
 
+.number {border: 1px solid gray; width: 10%;}
+.song {border: 1px solid gray; width: 70%;}
+.time {border: 1px solid gray; width: 10%}
 
-.number {border: 1px solid gray;}
-.song {border: 1px solid gray;}
-.time {border: 1px solid gray;}
-.spotify{
-  border: 1px solid gray;
-  font-size: 2em;
-  cursor:pointer;
-  transition: all 100ms linear;
-}
-.spotify:hover{
-  border: 1px solid black;
-  font-size: 2.5em;
-}
-.applemusic{
-  border: 1px solid gray;
-  transition: all 100ms linear;
-  font-size: 2em;
-  cursor:pointer;
-  opacity: 1;
-
-}
-.applemusic:hover{
-  border: 1px solid black;
-  font-size: 2.5em;
-}
 
 .add
 {
@@ -524,6 +489,7 @@ font-size: 2rem;
   font-size: 2em;
   cursor:pointer;
   transition: all 100ms linear;
+  width: 10%;
 }
 .add:hover
 {
@@ -532,73 +498,23 @@ font-size: 2rem;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 950px)
-{
   .gridcontain{
+    margin-top: 10vh;
+    max-height: 85vh;
     display: grid;
     grid-gap: 0px 0px;
-    grid-template-columns:auto auto;
-    grid-template-rows: auto auto auto;}
-  .Social{
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto;
-    height: 100%;}
-  .inst{background-image: url("../assets/logo.png");background-size: cover;background-position: center;}
-  .fb{background-image: url("../assets/fblogoblock.png");background-size: cover;background-position: center;}
-  .tw{background-image: url("../assets/twitterblocklogo.png");background-size: cover;background-position: center;}
-.addtext{font-size: 1em;}
-.spot{background-image: url("../assets/spotlogoblock.png");background-size: cover;background-position: center;}
-  .apple{background-image: url("../assets/musiclogoblock.png");background-size: cover;background-position: center;}
-  .yt {background-image: url("../assets/ytlogoblock.png"); background-size: cover;background-position: center;}
-  .Social .items {margin-bottom: 80px;}
+    grid-template-columns:auto auto auto auto auto;
+    grid-template-rows: auto ;}
   .items > span
   {
     font-family: nixieone;
     font-weight: normal;
     font-size: 4rem;
-    position: inherit;
-    width: 50vw;
     text-align: center;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
     color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #ECCFEB;
   }
-.albt
-{
-font-size: 1rem;
-}
-
-}
-@media only screen and (min-width: 951px){  .gridcontain {display: inline-grid;
-  grid-gap: 0px 0px;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-template-rows: auto;}
-  .Social{display: grid;
-  grid-template-rows: auto auto auto auto auto auto;
-  grid-template-columns: auto;}
-}
-@media only screen and (max-width: 1200px){
-.side {display:block;}
-.navbar {display:none;}
-.items > span {font-size: 3.4rem;}}
-@media only screen and (min-width: 1200px)
-{.side {display:none}}

@@ -157,8 +157,13 @@ $(".saveplaylistbutton").click(function(){
 localStorage.setItem("tabledata", JSON.stringify(namearr));
 localStorage.setItem("timedata", JSON.stringify(timearr));
 });
+function SavePlaylist(){
+  localStorage.setItem("tabledata", JSON.stringify(namearr));
+  localStorage.setItem("timedata", JSON.stringify(timearr));
+};
 $(".Authbutton").click(function(){
- window.location="https://accounts.spotify.com/en/authorize?client_id=f46a343f40644df5ad43f840a26e025c&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
+  SavePlaylist();
+ window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
 });
 $(".playlistbutton").click(function(){
   url = window.location.href,
@@ -241,7 +246,7 @@ headers: {
     'Authorization': 'Bearer ' + access_token
 },
 success: function(){
-    
+
 }
 
 });
