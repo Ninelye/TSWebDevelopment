@@ -176,6 +176,10 @@ $(".playlistbutton").click(function(){
          timearr = JSON.parse(timestored);
                  }
            }
+ $(namearr).each(function(index, value){
+ $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[index] + "</td></tr>" );
+});
+ console.log(namearr);
   url = window.location.href,
        access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
        $.ajax({
@@ -188,7 +192,6 @@ $(".playlistbutton").click(function(){
            success: function(response) {
               id = response;
                userid = id.id;
-
                  CreatePlaylist();
            },
            error: function() {
