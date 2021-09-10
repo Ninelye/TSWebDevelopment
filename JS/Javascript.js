@@ -23,7 +23,7 @@ function closeNav() {
 }
 function initialize() {
   //If an access token exists then spotify has been authorised
-  if (url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1] !== null)
+  if (window.location.href.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1] !== null)
   {
     button = document.getElementsByClassName("Authbutton")[0];
     button.disabled = true;
