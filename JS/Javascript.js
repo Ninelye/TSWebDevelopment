@@ -22,6 +22,19 @@ function closeNav() {
     bar.style.width = "0px";
 }
 function initialize() {
+  //If an access token exists then spotify has been authorised
+  if (url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1] !== null)
+  {
+    button = document.getElementsByClassName("Authbutton")[0];
+    button.disabled = true;
+    button.style.backgroundColor="#7EA16D";
+    button.style.text ="Spotify Authorised"
+    document.getElementsByClassName("playlistbutton")[0].disabled = false;
+
+  }
+  else {
+      document.getElementsByClassName("playlistbutton")[0].disabled = false;
+  };
 console.log("Ready");
 bar = document.getElementsByClassName("sidebar")[0];
 }
@@ -165,14 +178,16 @@ function SavePlaylist(){
 };
 
 $(".Authbutton").click(function(){
-  Authorise();
+  SavePlaylist();
+ window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
 });
 
 function Authorise(){
+  //Not in use - CORS No access with Github Pages.
   SavePlaylist();
   $.ajax({
     type: "GET",
-    url: 'https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&response_type=token&scope=playlist-modify-public',
+    url: 'https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public',
     contentType: "application/json",
     success: function(response) {
       console.log(response)
@@ -182,6 +197,7 @@ function Authorise(){
      }
   })
 };
+
 
 $(".playlistbutton").click(function(){
   console.log("Before");
