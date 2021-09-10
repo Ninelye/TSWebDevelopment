@@ -29,11 +29,11 @@ function initialize() {
     button.disabled = true;
     button.style.backgroundColor="#DAEDD1";
     button.style.value = "Spotify Authorised";
-    document.getElementsByClassName("playlistbutton")[0].disabled = true;
+    document.getElementsByClassName("playlistbutton")[0].disabled = false;
 
   }
   else {
-      document.getElementsByClassName("playlistbutton")[0].disabled = false;
+      document.getElementsByClassName("playlistbutton")[0].disabled = true;
   };
 console.log("Ready");
 bar = document.getElementsByClassName("sidebar")[0];
