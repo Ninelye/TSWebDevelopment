@@ -165,8 +165,7 @@ function SavePlaylist(){
 };
 
 $(".Authbutton").click(function(){
-  SavePlaylist();
- window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
+  Authorise();
 });
 
 function Authorise(){
