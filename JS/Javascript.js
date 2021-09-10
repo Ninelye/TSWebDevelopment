@@ -27,9 +27,9 @@ function initialize() {
   {
     button = document.getElementsByClassName("Authbutton")[0];
     button.disabled = true;
-    button.style.backgroundColor="#7EA16D";
-    button.style.text ="Spotify Authorised"
-    document.getElementsByClassName("playlistbutton")[0].disabled = false;
+    button.style.backgroundColor="#DAEDD1";
+    button.style.value = "Spotify Authorised";
+    document.getElementsByClassName("playlistbutton")[0].disabled = true;
 
   }
   else {

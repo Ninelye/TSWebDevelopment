@@ -302,6 +302,7 @@ border-bottom: 0px solid #FFFAFF;
 }
 
 
+
 /*Video Page */
 .maincontain{
 margin-top: 10vh;
@@ -390,6 +391,11 @@ position: fixed;
 bottom: 13vh;
 right: 0;
 margin: 1%;
+font-family: abadi;
+font-size: 1rem;
+background-color: #FFFAFF;
+border: 1px solid #B02541;
+cursor: pointer;
 }
 .Authbutton{
 height: 5vh;
@@ -398,13 +404,31 @@ position: fixed;
 bottom:  7vh;
 right: 0;
 margin: 1%;
+font-family: abadi;
+font-size: 1rem;
+background-color: #FFFAFF;
+border: 1px solid #B02541;
+cursor: pointer;
 }
 .saveplaylistbutton{
 height: 5vh;
-width: 15vw;
+width: 30vw;
 position: fixed;
-top: 68vh;
+right: 0;
+bottom: 2vh;
+font-family: abadi;
+font-size: 1rem;
+background-color: #FFFAFF;
+border: 1px solid #B02541;
+cursor: pointer;
 }
+.Authbutton:hover{
+background-color: #ECCFEB;
+}
+.playlistbutton:hover{
+background-color: #ECCFEB;
+}
+
 .albt{
 width:11vw;
 position: relative;
