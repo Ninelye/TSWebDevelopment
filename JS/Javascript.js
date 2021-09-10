@@ -152,21 +152,26 @@ if (localStorage.getItem("tabledata") !== null){
           }
 $(namearr).each(function(index, value){
 $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[index] + "</td></tr>" );
-})
+});
+
 $(".saveplaylistbutton").click(function(){
 localStorage.setItem("tabledata", JSON.stringify(namearr));
 localStorage.setItem("timedata", JSON.stringify(timearr));
 });
+
 function SavePlaylist(){
   localStorage.setItem("tabledata", JSON.stringify(namearr));
   localStorage.setItem("timedata", JSON.stringify(timearr));
 };
+
 $(".Authbutton").click(function(){
   SavePlaylist();
  window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
 });
+
 $(".playlistbutton").click(function(){
   SavePlaylist();
+  console.log("Before");
  window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
  if (localStorage.getItem("tabledata") !== null){
    var stored = localStorage.getItem("tabledata");
@@ -179,7 +184,7 @@ $(".playlistbutton").click(function(){
  $(namearr).each(function(index, value){
  $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[index] + "</td></tr>" );
 });
- console.log(namearr);
+ console.log("Doing it!");
   url = window.location.href,
        access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
        $.ajax({
