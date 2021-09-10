@@ -168,13 +168,11 @@ $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[in
 });
 
 $(".saveplaylistbutton").click(function(){
-localStorage.setItem("tabledata", JSON.stringify(namearr));
-localStorage.setItem("timedata", JSON.stringify(timearr));
+ClearPlaylist();
 });
 
-function SavePlaylist(){
-  localStorage.setItem("tabledata", JSON.stringify(namearr));
-  localStorage.setItem("timedata", JSON.stringify(timearr));
+function ClearPlaylist(){
+  localStorage.clear();
 };
 
 $(".Authbutton").click(function(){
