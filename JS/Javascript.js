@@ -168,6 +168,14 @@ $(".Authbutton").click(function(){
 $(".playlistbutton").click(function(){
   SavePlaylist();
  window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
+ if (localStorage.getItem("tabledata") !== null){
+   var stored = localStorage.getItem("tabledata");
+   var timestored = localStorage.getItem("timedata")
+     if (stored) {
+         namearr = JSON.parse(stored);
+         timearr = JSON.parse(timestored);
+                 }
+           }
   url = window.location.href,
        access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
        $.ajax({
