@@ -166,6 +166,8 @@ $(".Authbutton").click(function(){
  window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
 });
 $(".playlistbutton").click(function(){
+  SavePlaylist();
+ window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
   url = window.location.href,
        access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
        $.ajax({
