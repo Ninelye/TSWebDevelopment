@@ -176,7 +176,7 @@ function Authorise(){
 
 $(".playlistbutton").click(function(){
   console.log("Before");
-  Authorise();
+  //Authorise();
   console.log("After");
   url = window.location.href,
        access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
