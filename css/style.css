@@ -367,7 +367,7 @@ width: 67.5vw;
 position: relative;
 margin-left: 1vw;
 margin-top: 13vh;
-overflow-y: auto;
+overflow-y: fixed;
 }
 .playlist{
 height: 60vh;
