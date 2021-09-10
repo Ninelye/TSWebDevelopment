@@ -171,7 +171,17 @@ $(".Authbutton").click(function(){
 
 function Authorise(){
   SavePlaylist();
- window.location="https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public ";
+  $.ajax({
+    type: "GET",
+    url: 'https://accounts.spotify.com/en/authorize?client_id=bbbccc226fd1456b900a5668be77b533&redirect_uri=https://ninelye.github.io/TSWebDevelopment/Music.html&response_type=token&scope=playlist-modify-public',
+    contentType: "application/json",
+    success: function(response) {
+      console.log(response)
+    },
+    error: function() {
+      console.log("Error! :(");
+     }
+  })
 };
 
 $(".playlistbutton").click(function(){
