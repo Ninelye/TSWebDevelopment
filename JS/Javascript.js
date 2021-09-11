@@ -167,6 +167,12 @@ $(namearr).each(function(index, value){
 $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[index] + "</td></tr>" );
 });
 
+
+function SavePlaylist(){
+  localStorage.setItem("tabledata", JSON.stringify(namearr));
+  localStorage.setItem("timedata", JSON.stringify(timearr));
+};
+
 $(".clearplaylistbutton").click(function(){
 ClearPlaylist();
 location.reload();
@@ -175,6 +181,7 @@ location.reload();
 function ClearPlaylist(){
   localStorage.clear();
 };
+
 
 $(".Authbutton").click(function(){
   SavePlaylist();
