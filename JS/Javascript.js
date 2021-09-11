@@ -167,7 +167,7 @@ $(namearr).each(function(index, value){
 $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[index] + "</td></tr>" );
 });
 
-$(".saveplaylistbutton").click(function(){
+$(".clearplaylistbutton").click(function(){
 ClearPlaylist();
 });
 
