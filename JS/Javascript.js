@@ -169,6 +169,7 @@ $(".playlisttable tr:last").after( "<tr><td>" + value + "</td><td>" + timearr[in
 
 $(".clearplaylistbutton").click(function(){
 ClearPlaylist();
+location.reload();
 });
 
 function ClearPlaylist(){
