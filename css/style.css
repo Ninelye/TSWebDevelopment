@@ -107,7 +107,7 @@ position: absolute;
 .strikethrough::before
 {
   content: '';
-  background: #A17D9F;
+  background: #B02541;
   position: absolute;
   top: 50%;
   height: 2px;
@@ -230,9 +230,9 @@ width: 50vw;
 }
 .container{
   margin-top: 10vh;
-	height: 80vh;
+	height: 87.5vh;
 }
-.heightremove{height:auto;}
+
 
 .containerembed{
 height: 80vh;
@@ -342,6 +342,8 @@ Border: 10px solid #B02541;
 .holdfive{background-image: url(https://i.ytimg.com/vi/7F37r50VUTQ/maxresdefault.jpg);background-position: right;}
 iframe {
     display:block;
+    width: 100%;
+    height: 100%;
 }
 .mainembed {
 float: right;
@@ -382,7 +384,7 @@ font-family: nixieone;
 text-align: center;
 justify-content: center;
 overflow-y: visible;
-margin: 1%;
+margin: 0 1% 1% 1%;
 }
 .playlistbutton{
 height: 5vh;
@@ -415,8 +417,9 @@ height: 5vh;
 width: 30vw;
 position: fixed;
 right: 0;
-bottom: 7vh;
+bottom: 6vh;
 margin: 0 1% 1% 1%;
+
 font-family: abadi;
 font-size: 1rem;
 background-color: #FFFAFF;
