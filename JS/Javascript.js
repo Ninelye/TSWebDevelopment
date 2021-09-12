@@ -33,11 +33,14 @@ function initialize() {
 
   }
   else {
-      document.getElementsByClassName("playlistbutton")[0].disabled = true;
+    if (location.href.match("Music") == true){
+        document.getElementsByClassName("playlistbutton")[0].disabled = true;
+    }
+
   };
 console.log("Ready");
 bar = document.getElementsByClassName("sidebar")[0];
-}
+};
 $(document).ready(function(){
   initialize();
 
@@ -83,18 +86,20 @@ $(".Music").click(function(){
 $(".Video").click(function(){
  location.href="Video.html";
 });
-$(".netflix").click(function(){
- location.href="https://www.netflix.com/title/81026251";
-});
-$(".second").click(function(){
- location.href="https://www.ft.com/content/a08bf23c-0ea6-11e9-a3aa-118c761d2745";
-});
-$(".third").click(function(){
- location.href="http://time.com/5493277/taylor-swift-mermaid-album/";
+$(".Vid1").click(function(){
+ location.href="https://www.disneyplus.com/en-gb/movies/folklore-the-long-pond-studio-sessions/3Xlc0EjKtKpp";
 });
 $(".feature").click(function(){
  location.href="https://www.youtube.com/watch?v=aXzVF3XeS8M";
 });
+$(".Vid2").click(function(){
+ location.href="https://www.youtube.com/watch?v=osdoLjUNFnA";
+});
+$(".Vid3").click(function(){
+ location.href="https://store.taylorswift.com/products/red-taylors-version-cd";
+});
+
+
 $("#rep").show();
 $("#n1989").hide();
 $("#red").hide();

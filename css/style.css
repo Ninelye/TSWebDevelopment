@@ -331,6 +331,25 @@ justify-content: center;
 display:inline-block;
 border: 1px solid #B02541;
 }
+.Vid1{
+  background-image: url("https://www.cnet.com/a/img/jyvaGwjoB4IL723qb1Q6CYw108M=/940x0/2020/11/25/c8c82a15-6b58-4fd8-be72-6a020c2e7a74/enp6i2awmaevso5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.Vid2{
+  background-image: url("https://i.ytimg.com/vi/osdoLjUNFnA/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.Vid3{
+  background-image: url("https://cdn.shopify.com/s/files/1/0011/4651/9637/t/163/assets/share.png?v=1103133889346351190");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 iframe {
     display:block;
