@@ -92,6 +92,9 @@ $(".second").click(function(){
 $(".third").click(function(){
  location.href="http://time.com/5493277/taylor-swift-mermaid-album/";
 });
+$(".feature").click(function(){
+ location.href="https://www.youtube.com/watch?v=aXzVF3XeS8M";
+});
 $("#rep").show();
 $("#n1989").hide();
 $("#red").hide();
