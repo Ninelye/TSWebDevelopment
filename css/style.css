@@ -249,14 +249,10 @@ box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-  position: fixed;
   margin: 25%;
-  height: 50%;
+  height: auto;
   width: 50%;
-  height: 14vh;
   z-index: 100;
-  cursor: pointer;
   overflow: hidden;
   font: normal 2em/1 nixieone;
   color: black;
