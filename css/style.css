@@ -315,27 +315,19 @@ display:block;
 }
 .holder{
 display: inline-block;
-width: 15%;
+width: 18%;
 position: relative;
 background-color: pink;
-height: 50%;
-padding: 0;
+height: 75%;
+margin-top: 5%;
 align-self: center;
 cursor: pointer;
 text-align:center;
 justify-content: center;
 display:inline-block;
-background-repeat: no-repeat;
-background-size: cover;
+border: 1px solid #B02541;
 }
-.holder:hover{
-Border: 10px solid #B02541;
-}
-.holdone{background-image: url(https://i.ytimg.com/vi/HIb_TlK2HAI/maxresdefault.jpg);}
-.holdtwo{background-image: url(https://img.cache.vevo.com/thumb/cms/ffec47c242023535fd87d8a8063c5c4c201810115401057.jpg);}
-.holdthree{background-image: url(https://images1.laweekly.com/imager/u/745xauto/8593718/taylor-swift-look-what-you-made-me-do.png);background-position: right;}
-.holdfour{background-image: url(https://i.ytimg.com/vi/sEr7bAtZ8rY/maxresdefault.jpg);background-position: left;}
-.holdfive{background-image: url(https://i.ytimg.com/vi/7F37r50VUTQ/maxresdefault.jpg);background-position: right;}
+
 iframe {
     display:block;
     width: 100%;
